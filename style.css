@@ -156,7 +156,6 @@ aside .sidebar{
     height: 88vh;
     position: relative;
     top: 1.5rem;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -224,6 +223,7 @@ aside .sidebar .message-count{
 main{
     margin-top: 1.4rem;
 }
+
 main .analyse{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -238,6 +238,10 @@ main .analyse > div{
     box-shadow: var(--box-shadow);
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+main .analyse > div:hover{
+    box-shadow: none;
 }
 
 main .analyse > div .status{
@@ -335,15 +339,15 @@ main .new-users .user-list .user img{
     border-radius: 50%;
 }
 
-main .recent-oders{
+main .recent-orders{
     margin-top: 1.3rem;
 }
 
-main .recent-oders h2{
+main .recent-orders h2{
     margin-bottom: 0.8rem;
 }
 
-main .recent-oders table{
+main .recent-orders table{
     background-color: var(--color-white);
     width: 100%;
     padding: var(--card-padding);
@@ -353,7 +357,7 @@ main .recent-oders table{
     transition: all 0.3s ease;
 }
 
-main .recent-oders table:hover{
+main .recent-orders table:hover{
     box-shadow: none;
 }
 
@@ -363,11 +367,11 @@ main table tbody td{
     color: var(--color-dark-variant);
 }
 
-main table tbody tr{
+main table tbody tr:last-child td{
     border: none;
 }
 
-main .recent-oders a{
+main .recent-orders a{
     text-align: center;
     display: block;
     margin: 1rem auto;
@@ -447,7 +451,7 @@ main .recent-oders a{
 .right-section .user-profile img{
     width: 11rem;
     height: auto;
-    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
     border-radius: 50%;
 }
 
@@ -471,4 +475,118 @@ main .recent-oders a{
     box-shadow: var(--box-shadow);
     background-color: var(--color-white);
     border-radius: 50%;
+}
+
+.right-section .reminders .notification{
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .reminders .notification:hover{
+    box-shadow: none;
+}
+
+.right-section .reminders .notification .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.right-section .reminders .notification .icon{
+    padding: 0.6rem;
+    color: var(--color-white);
+    background-color: var(--color-success);
+    border-radius: 20%;
+    display: flex;
+}
+
+.right-section .reminders .notification.deactive .icon{
+    background-color: var(--color-danger);
+}
+
+.right-section .reminders .add-reminder{
+    background-color: var(--color-white);
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.right-section .reminders .add-reminder:hover{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.right-section .reminders .add-reminder div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 95%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    aside .logo h2{
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main .analyse{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    main .new-users .user-list .user{
+        flex-basis: 40%;
+    }
+
+    main .recent-orders {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 0.8rem;
+    }
+
+    main .recent-orders table{
+        width: 83vw;
+    }
+
+    main table thead tr th:last-child,
+    main table thead tr th:first-child{
+        display: none;
+    }
+
+    main table tbody tr td:last-child,
+    main table tbody tr td:first-child{
+        display: none;
+    }
+
 }
