@@ -1,9 +1,9 @@
-# Admin Dashboard
+<h1 align="center">Admin Dashboard</h1>
 
-This project consists of a simple administration dashboard developed with the purpose of studying and practicing web page layout using HTML and CSS, along with implementing basic concepts of JavaScript.
+<p align="center">
+  <em>This project features a straightforward administration dashboard, created with the intent of studying and practicing web page layout using HTML, CSS, and introducing fundamental JavaScript concepts.</em>
+</p>
 
-Key Features:<br>
-Dashboard Design: A modern and attractive admin panel design has been created.<br>
-Responsive Layout: The dashboard is designed to be fully responsive and adapt to different screen sizes.<br>
-
-![dashboard1](https://github.com/Gabriel-demian/Admin-Dashboard/assets/57782295/97657de1-3e66-4b1a-b0b7-85eab92b1647)
+<p align="center">
+  <img src="https://github.com/Gabriel-demian/Admin-Dashboard/assets/57782295/97657de1-3e66-4b1a-b0b7-85eab92b1647" alt="Dashboard Screenshot">
+</p>
